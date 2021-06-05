@@ -170,6 +170,17 @@ h1{
 .food-description{
     padding: 10px;
 }
+.slider{
+    display: flex;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.slider img{
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+}
 @media only screen and (max-width:768px){
     .container-hero {
         grid-template-rows: 1fr .5fr .5fr;
