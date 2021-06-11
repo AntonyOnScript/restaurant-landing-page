@@ -223,6 +223,40 @@ h1{
     font-size: 3rem;
     padding-left: 60px;
 }
+.booking{
+    padding: 100px;
+}
+.booking form{
+    margin-top: 100px;
+}
+.booking form input:focus{
+    border-color: #FC2E20;
+}
+legend{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+fieldset{
+    border: none;
+    margin-bottom: 30px;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    width: fit-content;
+}
+.submit-form{
+    margin: 0 auto;
+    cursor: pointer;
+}
+form input{
+    appearance: none;
+    background-color: white;
+    border: solid 2px #b11f15;
+    padding: 10px;
+    width: 270px;
+}
 @media only screen and (max-width:768px){
     .container-hero {
         grid-template-rows: 1fr .5fr .5fr;
