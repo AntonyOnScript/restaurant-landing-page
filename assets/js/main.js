@@ -4,6 +4,14 @@ class Slider{
         this.buttonNext = buttonNext
         this.buttonPrevious = buttonPrevious
         this.images = Array.from(images)
+
+        this.buttonNext.addEventListener('click', ()=>{
+            this.toPass(1)
+        })
+
+        this.buttonPrevious.addEventListener('click', ()=>{
+            this.toPass(0)
+        })
     }
 
     checkImages() {
@@ -12,35 +20,23 @@ class Slider{
         }
     }
 
-    toPass(){
+    toPass(value){
         this.checkImages()
-        let position
-        let newPosition
-        for(let i in this.images){
-            if(this.images[i].getAttribute('class', 'showing')){
-                position = i
-                break   
+        let ImagesWidth = this.images[0].scrollWidth
+
+        if(value === 1){
+            if(this.slideField.scrollLeft >= (ImagesWidth*this.images.length) - ImagesWidth){
+                this.slideField.scrollLeft = 0
+            }else{
+                this.slideField.scrollLeft += ImagesWidth
+            }
+        }else{
+            if(this.slideField.scrollLeft === 0){
+                this.slideField.scrollLeft = ImagesWidth*this.images.length
+            }else{
+                this.slideField.scrollLeft -= ImagesWidth
             }
         }
-
-        console.log('pos', position)
-        console.log('new pos', newPosition)
-
-        if(Number(position)+1 !== this.images.length){
-            newPosition = String(Number(position)+1)
-        }else{
-            newPosition ='0'
-        }
-
-        console.log('pos', position)
-        console.log('new pos', newPosition)
-        
-        this.images[position].classList.remove('showing')
-        
-        this.images[newPosition].classList.add('showing')
-        this.images[newPosition].scrollIntoView()
-        
-        
     }
 
 }

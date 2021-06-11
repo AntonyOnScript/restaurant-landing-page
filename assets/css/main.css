@@ -6,6 +6,7 @@
     font: 300 13pt "Poppins";
     word-wrap: break-word;
     outline: none;
+    font-smooth: always;
 }
 :root{
     --padding-space-01: 100px;
@@ -170,7 +171,11 @@ h1{
 .food-description{
     padding: 10px;
 }
+.slider-field{
+    position: relative;
+}
 .slider{
+    scroll-behavior: smooth;
     display: flex;
     position: relative;
     max-width: 100%;
@@ -180,6 +185,43 @@ h1{
     position: relative;
     min-width: 100%;
     max-width: 100%;
+}
+.previous, .next{
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    z-index: 4;
+    transition: all .2s;
+}
+.previous:hover, .next:hover{
+    color: rgb(212, 212, 212);
+}
+.previous{
+    top: calc(50% - 40px);
+    left: 0;
+}
+.next{
+    top: calc(50% - 40px);
+    right: 0;
+}
+.fixed-text{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    width: 50%;
+    height: 100%;
+    background: rgb(0,1,37);
+    background: linear-gradient(90deg, rgba(0,1,37,0.9136029411764706) 74%, rgba(0,1,37,0.5578606442577031) 88%, rgba(255,205,0,0) 100%);
+}
+.fixed-text h1{
+    color: white;
+    font-size: 3rem;
+    padding-left: 60px;
 }
 @media only screen and (max-width:768px){
     .container-hero {
