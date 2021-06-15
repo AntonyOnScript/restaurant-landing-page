@@ -230,7 +230,7 @@ h1{
     padding-left: 70px;
 }
 .booking{
-    padding: 100px;
+    padding: 100px var(--padding-space-01);
 }
 .booking form{
     margin-top: 100px;
@@ -266,7 +266,7 @@ form input{
     width: 270px;
 }
 footer{
-    padding: 100px;
+    padding: 100px var(--padding-space-01);
     display: flex;
     justify-content: space-around;
     max-width: 100%;
@@ -413,6 +413,23 @@ fieldset input:nth-child(3){
     }
     .mobile-menu{
         display: block;
+    }
+}
+@media only screen and (max-width: 666px){
+    .foods{
+        grid-template-columns: 300px;
+    }
+    .booking form{
+        margin: 40px auto;
+        margin-bottom: 0px;
+    }
+}
+@media only screen and (max-width: 577px){
+    :root{
+        --padding-space-01: 30px;
+    }
+    .fixed-text h1{
+        font-size: 1rem;
     }
 }
 @keyframes menuGoodBye{
