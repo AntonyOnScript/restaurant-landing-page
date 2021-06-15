@@ -8,6 +8,9 @@
     outline: none;
     font-smooth: always;
 }
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
+}
 :root{
     --padding-space-01: 100px;
 }
@@ -38,6 +41,9 @@ a::after{
     background-color: #FC2E20;
     border-radius: 6px;
     transition: width .3s ease-in-out, left .3s ease-in-out;
+}
+header nav{
+    margin-right: 40px;
 }
 header nav ul li a{
     font-weight: 400;
@@ -213,7 +219,7 @@ h1{
     align-items: center;
     position: absolute;
     z-index: 3;
-    width: 50%;
+    width: 65%;
     height: 100%;
     background: rgb(0,1,37);
     background: linear-gradient(90deg, rgba(0,1,37,0.9136029411764706) 74%, rgba(0,1,37,0.5578606442577031) 88%, rgba(255,205,0,0) 100%);
@@ -221,7 +227,7 @@ h1{
 .fixed-text h1{
     color: white;
     font-size: 3rem;
-    padding-left: 60px;
+    padding-left: 70px;
 }
 .booking{
     padding: 100px;
@@ -237,8 +243,10 @@ legend{
     margin-bottom: 10px;
 }
 fieldset{
+    display: flex;
     border: none;
     margin-bottom: 30px;
+    padding: 0;
 }
 form{
     display:flex;
@@ -281,6 +289,91 @@ footer div{
 footer img{
     width: 200px;
 }
+fieldset input:nth-child(3){
+    margin-left: 10px;
+}
+.mobile-menu{
+    display: none;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.menu-lateral{
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    min-height:100%;
+    max-width: 100%;
+}
+.close-menu .line{
+    width: 25px;
+    height: 4px;
+    cursor: pointer;
+}
+.close-menu .line:nth-child(1){
+    margin: 0;
+    transform: rotate(55deg);
+}
+.close-menu .line:nth-child(2){
+    display: none;
+    margin:0;   
+}
+.close-menu .line:nth-child(3){
+    margin: 0;
+    margin-top: 1px;
+    transform: rotate(307deg) translate(4px, -3px);
+}
+.line{
+    width: 40px;
+    height: 5px;
+    margin: 5px;    
+    background-color: #FC2E20;
+    border-radius: 4px;
+}
+.close-menu{
+    justify-self: flex-end;
+    margin: 40px 40px 0px 0px;
+}
+.menu-lateral nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-lateral nav ul{
+    display: flex;
+    flex-direction: column;
+}
+.menu-lateral nav ul li{
+    margin-bottom: 15px;
+}
+.menu-lateral nav ul li a{
+    font-weight: 400;
+}
+.menu-lateral nav ul li:hover a{
+    color: black;
+}
+.menu-lateral nav ul li:hover a::after{
+    width: 100%;
+    left: 0%;
+}
+@media only screen and (max-width: 1011px){
+    .foods{
+        grid-template-columns: 300px 300px;
+    }
+}
+@media only screen and (max-width: 807px){
+    footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    footer img{
+        margin-top: 120px;
+    }
+}
 @media only screen and (max-width:768px){
     .container-hero {
         grid-template-rows: 1fr .5fr .5fr;
@@ -301,5 +394,40 @@ footer img{
     }
     .second-button button{
         align-self: center;
+    }
+    fieldset{
+        flex-direction: column;
+    }
+    form input{
+        width:100%;
+    }
+    .fixed-text h1{
+        font-size: 2rem;
+    }
+    fieldset input:nth-child(3){
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    header nav{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+@keyframes menuGoodBye{
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    to{
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+}
+@keyframes menuAppears{
+    from{
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 }

@@ -7,23 +7,44 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/menu.js" defer></script>
 </head>
 <body>
-    <header>
+    <section class="menu-lateral">
+        <div class="close-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-link"><a href="#home">Home</a></li>
+                <li class="menu-link"><a href="#menu">Our Menu</a></li>
+                <li class="menu-link"><a href="#bookit">Book a table</a></li>
+                <li class="menu-link"><a href="#gallery">Gallery</a></li>
+                <li class="menu-link"><a href="#contact">Contact Us</a></li> 
+            </ul>
+        </nav>
+    </section>
+    <header id="home">
         <div class="logo" style="cursor: pointer;">
             <h3>Logo</h3>
             <img src="assets/img/bing.svg">
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Menu</a></li>
-                <li><a href="#">Book a table</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">More About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#bookit">Book a table</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li> 
             </ul>
         </nav>
+        <div class="mobile-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </header>
     <section class="first-banner">
         <div class="container-hero">
@@ -40,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section class="menu-section">
+    <section class="menu-section" id="menu">
         <h1>> Check our menu!</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem quia, pariatur nisi ipsum animi nesciunt, maiores non dolor iusto voluptatibus possimus et perferendis explicabo iure numquam? Aliquam, ratione blanditiis?</p>
         <div class="foods">
@@ -70,7 +91,7 @@
             </article>
         </div>
     </section>
-    <section class="slider-field">
+    <section class="slider-field" id="gallery">
         <div class="fixed-text">
             <h1 class="content-text-slide">The best tables for you and your family</h1>
         </div>
@@ -86,7 +107,7 @@
             <img src="assets/img/07.jpg">
         </div>
     </section>
-    <section class="booking">
+    <section class="booking" id="bookit">
         <h1>> Book it now!</h1>
         <form>
             <fieldset>
@@ -102,7 +123,7 @@
             <input type="submit" value="Done" class="submit-form">
         </form>
     </section>
-    <footer>
+    <footer id="contact">
         <img src="assets/img/bing.svg" alt="">
         <div>
             <h3>Address</h3>
