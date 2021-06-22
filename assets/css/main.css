@@ -143,10 +143,13 @@ h1{
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color:rgba(0, 0, 0, 0.178);
-    border: 1px solid rgba(0, 0, 0, 0.185);
-    border-radius: 5px;
     grid-area: title;
+    
+}
+
+.hero-title h1 {
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px black;
 }
 .menu-section{
     padding: 100px var(--padding-space-01);
@@ -179,6 +182,7 @@ h1{
 }
 .slider-field{
     position: relative;
+    margin-top: 100px;
 }
 .slider{
     scroll-behavior: smooth;
@@ -221,13 +225,14 @@ h1{
     z-index: 3;
     width: 65%;
     height: 100%;
-    background: rgb(0,1,37);
-    background: linear-gradient(90deg, rgba(0,1,37,0.9136029411764706) 74%, rgba(0,1,37,0.5578606442577031) 88%, rgba(255,205,0,0) 100%);
+   
 }
 .fixed-text h1{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     padding-left: 70px;
+    font-size: 3.2rem;
+    text-shadow: 1px 1px 1px black;
 }
 .booking{
     padding: 100px var(--padding-space-01);
